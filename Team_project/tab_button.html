@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<link rel="stylesheet" type="text/css" href="css/index.css" />
+		<script src="js/move.js"></script>
+		<title></title>
+	</head>
+
+	<body>
+		<section>
+			<ul>
+				<li>dasd</li>
+				<li>dadasda</li>
+				<li>ddsfa</li>
+				<li>dfdsgd</li>
+			</ul>
+			<div class="btn">
+				<span class="prev"><</span>
+				<button class="active">1</button>
+				<button>2</button>
+				<button>3</button>
+				<button>4</button>
+				<span class="next">></span>
+			</div>
+		</section>
+	</body>
+	<script type="text/javascript">
+		var aBtn = document.getElementsByTagName('button');
+		var aLi = document.getElementsByTagName('ul')[0].children;
+		var oPrev = document.getElementsByClassName('prev')[0];
+		var oNext = document.getElementsByClassName('next')[0];
+		var iNum = 0;
+		
+		for(var i = 0; i < aBtn.length; i++) {
+			aBtn[i].index = i;
+			aBtn[i].onclick = function() {
+					iNum = this.index;
+					tab();
+			}
+		}
+
+		function tab() {
+			for(var i = 0; i < aBtn.length; i++) {
+				aBtn[i].className = ''
+				move(aLi[i],{opacity:0},{dur:500})
+			}
+			aBtn[iNum].className = 'active';
+			move(aLi[iNum],{opacity:1},{dur:500})
+		}
+		
+		oPrev.onclick = function(){
+			iNum --;
+			if(iNum == -1)iNum = aBtn.length - 1;
+			tab();
+		}
+		
+		oNext.onclick = function(){
+			iNum ++;
+			if(iNum == aBtn.length)iNum = 0;
+			tab();
+		}
+	</script>
+
+</html>

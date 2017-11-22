@@ -1,0 +1,43 @@
+section {
+    width: 1100px;
+    height: 1240px;
+    background: red;
+    margin: 0 auto;
+    position: relative;
+    .btn {
+        width: 252px;
+        height: 37px;
+        position: absolute;
+        bottom: 43px;
+        left: 430px;
+        cursor: pointer;
+        button {
+            width: 37px;
+            height: 37px;
+            float: left;
+            border: none;
+            outline: none;
+            text-align: center;
+            line-height: 37px;
+            background: white;
+            margin-right: 5px;
+            color: #EBD6D3;
+            cursor: pointer;   
+        }
+        span{
+            width: 37px;
+            height: 37px;
+            float: left;
+            border: none;
+            outline: none;
+            text-align: center;
+            line-height: 37px;
+            background: white;
+            margin-right: 5px;
+            color: #EBD6D3;
+        }
+        .active {
+            background: #DC4311;
+        }
+    }
+}

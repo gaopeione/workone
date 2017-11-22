@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<link rel="stylesheet" type="text/css" href="css/index1.css" />
+		<title></title>
+	</head>
+
+	<body>
+		<header>
+			<div class="banner">
+				<div class="top">
+					<div class="top_left">
+						<img src="img/logo/logo_top.png" />
+						<p>网络全案营销服务提供商</p>
+					</div>
+					<ul>
+						<li>
+							<a href="#">网站首页</a>
+						</li>
+						<li>
+							<a href="#">传悦资源</a>
+						</li>
+						<li class="active">
+							<a href="#">传悦案例</a>
+						</li>
+						<li>
+							<a href="#">传悦服务</a>
+						</li>
+						<li>
+							<a href="#">解决方案</a>
+						</li>
+						<li>
+							<a href="#">需求提交</a>
+						</li>
+					</ul>
+					<ol>
+						<li class="tel">
+							<a href="#"><img src="img/logo/phone.png" /></a>
+						</li>
+						<li class="num">
+							<a href="#"><img src="img/logo/tel.png" /></a>
+						</li>
+						<li class="qq">
+							<a href="#"><img src="img/logo/qq.png" /></a>
+						</li>
+						<li class="weibo">
+							<a href="#"><img src="img/logo/weibo.png" /></a>
+						</li>
+						<li class="weixin">
+							<a href="#"><img src="img/logo/weixin.png" /></a>
+						</li>
+						<li class="email">
+							<a href="#"><img src="img/logo/Email.png" /></a>
+						</li>
+					</ol>
+				</div>
+			</div>
+		</header>
+	</body>
+	<script type="text/javascript">
+		var aA = document.getElementsByTagName('ul')[0].children;
+
+		for(var i = 0; i < aA.length; i++) {
+			aA[i].index = i;
+			aA[i].onclick = function() {
+				for(var i = 0; i < aA.length; i++){
+					aA[i].className = '';
+				}
+				aA[this.index].className = 'active';
+			}
+		}
+	</script>
+
+</html>
